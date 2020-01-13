@@ -1,6 +1,7 @@
 
 app_path : 'C:\Users\zsomb\PycharmProjects\ecg_reporter\ecg_reporter'
 images_path: 'C:\Users\zsomb\PycharmProjects\ecg_reporter\ecg_reporter\images'
+pdf_path: 'C:\Users\zsomb\PycharmProjects\ecg_reporter\ecg_reporter\pdf'
 
 #app_path: '/home/pi/db_report/poreporter'
 #input_files_path: '/home/ec2-user/db_report/poreporter/files/input_files'

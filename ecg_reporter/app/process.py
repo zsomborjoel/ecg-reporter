@@ -29,8 +29,18 @@ def process():
 
             df = execute_sql(sql.strip())
 
-            print(df)
+            # get signals from dataframe
+            signals = df.loc[:, "signal"]
 
+            # change dataframe data to numpy_array for biosppy lib
+            numpy_array = signals.to_numpy()
+
+            if df.empty:
+                pass
+            else:
+                visualise_part('heartgetsignal_first_half_' + str(act_day), df, 0, 4500)
+                visualise_part('heartgetsignal_secound_half_' + str(act_day), df, 4500, 10000)
+                visualise_all('heartgetsignal_summary_' + str(act_day) + ".png", numpy_array)
 
 
     except Exception as e:

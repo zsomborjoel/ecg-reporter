@@ -7,6 +7,7 @@ def add_to_log(row):
     :param row: input row for log
     :return: none
     """
+
     today = date.today()
     now = str(datetime.now())
     app_path = get_config('app_path')

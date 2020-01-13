@@ -5,8 +5,8 @@ import os
 
 def get_config(yaml_collection_name):
     """
-    :param yaml_collection_name: value from yaml file to get
-    :return: corresponding yaml values
+    :param yaml_collection_name: str, value from yaml file to get
+    :return: dict, corresponding yaml values
     """
 
     path = Path(os.path.abspath(__file__))
