@@ -133,3 +133,6 @@ dmypy.json
 
 # Log
 log/*.txt
+
+# Pdf
+pdf/*.pdf
