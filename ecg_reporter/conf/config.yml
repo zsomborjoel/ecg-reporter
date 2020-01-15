@@ -1,11 +1,18 @@
-
+# Windows
 app_path : 'C:\Users\zsomb\PycharmProjects\ecg_reporter\ecg_reporter'
 images_path: 'C:\Users\zsomb\PycharmProjects\ecg_reporter\ecg_reporter\images'
 pdf_path: 'C:\Users\zsomb\PycharmProjects\ecg_reporter\ecg_reporter\pdf'
 
-#app_path: '/home/pi/db_report/poreporter'
-#input_files_path: '/home/ec2-user/db_report/poreporter/files/input_files'
+# Linux
+#app_path: '/home/pi/software/ecg_reporter'
+#images_path: '/home/pi/software/ecg_reporter/images'
+#pdf_path: '/home/pi/software/ecg_reporter/pdf'
 
+# Email sending
+from_address: 'gyhome.reporter@gmail.com'
+to_address: 'brainshare@gmail.com'
+
+# Database
 db:
     host: 'localhost'
     port: '5432'

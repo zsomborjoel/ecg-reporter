@@ -4,13 +4,14 @@ from ecg_reporter.app.pdf_creation import add_to_pdf
 from ecg_reporter.app.emails import send_mail
 from ecg_reporter.app.ecg_visualisation import visualise_all, visualise_part
 from ecg_reporter.app.clear import clear_images_directory
+from ecg_reporter.app.clear import get_config
 from datetime import date, timedelta
 import sys
 
 number_of_days = 7
 password = sys.argv[1]
-from_address = "gyhome.reporter@gmail.com"
-to_address = "zsomborjoel@gmail.com"
+from_address = get_config("from_address")
+to_address = get_config("to_address")
 subject = "Heti ECG kimutatás"
 
 def process():
