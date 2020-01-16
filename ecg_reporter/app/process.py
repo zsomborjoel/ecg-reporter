@@ -9,7 +9,7 @@ from datetime import date, timedelta
 import sys
 
 number_of_days = 7
-password = sys.argv[1]
+password = "&19gyhome94&"
 from_address = get_config("from_address")
 to_address = get_config("to_address")
 subject = "Heti ECG kimutatás"
@@ -33,7 +33,6 @@ def process():
                     order by heartgetsignal_id
                 ) sub where filtr = 1;
                 """.format(act_day)
-            print(act_day)
             df = execute_sql(sql.strip())
 
             # get signals from dataframe

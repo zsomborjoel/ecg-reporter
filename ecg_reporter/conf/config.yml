@@ -10,7 +10,7 @@ pdf_path: 'C:\Users\zsomb\PycharmProjects\ecg_reporter\ecg_reporter\pdf'
 
 # Email sending
 from_address: 'gyhome.reporter@gmail.com'
-to_address: 'brainshare@gmail.com'
+to_address: 'zsomborjoel@gmail.com'
 
 # Database
 db:

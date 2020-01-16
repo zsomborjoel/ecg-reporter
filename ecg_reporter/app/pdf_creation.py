@@ -1,3 +1,5 @@
+import glob
+
 from ecg_reporter.app.configs import get_config
 from ecg_reporter.app.logs import add_to_log
 from fpdf import FPDF
@@ -20,8 +22,9 @@ def add_to_pdf(startdate, enddate):
     pdf.cell(40, 10, 'Weekly ECG report {} - {}'.format(startdate, enddate))
     pdf.set_font('Arial', '', 12)
 
-    for filename in os.listdir(images_directory):
-        print(filename)
+    filelist = os.listdir(images_directory)
+
+    for filename in sorted(filelist):
         filename = str(filename)
         length = len(filename)
         pdf.ln(10)
