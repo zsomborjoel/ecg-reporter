@@ -8,6 +8,7 @@ from ecg_reporter.app.clear import get_config
 from datetime import date, timedelta
 import sys
 
+# Params
 number_of_days = 7
 password = sys.argv[1]
 from_address = get_config("from_address")
@@ -19,6 +20,7 @@ def process():
     try:
         today = date.today()
 
+        # Get Ecg data for last 7 days
         for day in range(number_of_days):
             act_day = today - timedelta(days=day)
             sql = """
@@ -44,6 +46,7 @@ def process():
             str_act_day = str(act_day)
             str_day = str(day)
 
+            # Visualize Ecg data
             if df.empty:
                 pass
             else:
@@ -51,8 +54,10 @@ def process():
                 visualise_part(str_day + 'heart_signal_second_half_' + str_act_day, df, 4500, 10000)
                 visualise_all(str_day + 'heart_signal_summary_' + str_act_day + ".png", numpy_array)
 
+        # Add to pdf and get back the path
         pdf_path, filename = add_to_pdf(str(today - timedelta(number_of_days)), str(today))
 
+        # Finally send report
         send_mail(
             from_address,
             to_address,
