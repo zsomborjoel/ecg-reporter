@@ -9,7 +9,7 @@ from datetime import date, timedelta
 import sys
 
 number_of_days = 7
-password = "&19gyhome94&"
+password = sys.argv[1]
 from_address = get_config("from_address")
 to_address = get_config("to_address")
 subject = "Heti ECG kimutatás"
