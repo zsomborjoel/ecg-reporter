@@ -1,4 +1,4 @@
-# Expense-Tracker
+# Ecg reporter
 
 Home ecg reporter application written for health monitoring purposes.
 
